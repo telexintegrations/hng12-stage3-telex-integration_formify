@@ -47,8 +47,8 @@ func HandleGenerate(ctx *gin.Context) {
 	}
 	// *******************
 
-	// text := ExtractText(msgReq.Message)
-	text := msgReq.Message
+	text := ExtractText(msgReq.Message)
+	// text := msgReq.Message
 
 	if text != "/generate_url" {
 		ctx.JSON(200, gin.H{
